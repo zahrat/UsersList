@@ -1,7 +1,7 @@
 import { useCallback } from "react";
-import CustomFlatList from "../../../atoms/CustomFlatList";
+import { CustomFlatList } from "~/components";
 import useUsersListHook from "./usersList.hook";
-import UsersListItem from "../../../molecules/UsersListItem";
+import UsersListItem from "~/components/molecules/UsersListItem";
 import { ActivityIndicator } from "react-native";
 
 export default function UsersList() {

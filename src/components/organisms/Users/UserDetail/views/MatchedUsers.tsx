@@ -1,5 +1,5 @@
 import { View } from "react-native";
-import UsersListItem from "../../../../molecules/UsersListItem";
+import UsersListItem from "~/components/molecules/UsersListItem";
 
 export default function MatchesUsers({ users }: any) {
   return (

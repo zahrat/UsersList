@@ -1,8 +1,8 @@
 import { useRoute } from "expo-router";
 import { useMemo, useState } from "react";
-import { flattenToArray } from "../../../../helpers/object";
+import { flattenToArray } from "~/helpers/object";
 import { useGetUsersQuery } from "../UsersListSection/hooks";
-import { pick3Numbers } from "../../../../helpers/utils";
+import { pick3Numbers } from "~/helpers/utils";
 
 export default function useUserDetailHook() {
   const [showMatchedUsers, setShowMatchedUsers] = useState<boolean>(false);

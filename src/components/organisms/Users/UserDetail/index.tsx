@@ -1,10 +1,8 @@
 import { Animated, StyleSheet, View } from "react-native";
-import CustomText from "../../../atoms/CustomText";
 import useUserDetailHook from "./userDetail.hook";
-import CustomScrollView from "../../../atoms/CustomScrollView";
-import CustomButton from "../../../atoms/CustomButton";
 import MatchesUsers from "./views/MatchedUsers";
 import { useEffect, useRef } from "react";
+import { CustomButton, CustomScrollView, CustomText } from "~/components";
 
 export default function UserDetail() {
   const { userInfo, matchesUsers, showMatchedUsers, onMathBtnPressed } =
