@@ -2,7 +2,7 @@ import { useCallback } from "react";
 import { CustomFlatList } from "~/components";
 import useUsersListHook from "./usersList.hook";
 import UsersListItem from "~/components/molecules/UsersListItem";
-import { ActivityIndicator } from "react-native";
+import { ActivityIndicator, StyleSheet } from "react-native";
 
 export default function UsersList() {
   const { users, isPending, refetch, isRefetching } = useUsersListHook();
@@ -11,7 +11,8 @@ export default function UsersList() {
     [],
   );
 
-  if (isPending) return <ActivityIndicator />;
+  if (isPending)
+    return <ActivityIndicator size="large" style={styles.loading} />;
   return (
     <CustomFlatList
       data={users}
@@ -21,3 +22,7 @@ export default function UsersList() {
     />
   );
 }
+
+const styles = StyleSheet.create({
+  loading: { marginTop: 20 },
+});
